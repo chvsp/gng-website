@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bg-white">
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
+          <div class="text-center">
+            <div class="mb-10">
+              <img
+                src="logo.png"
+                alt="german genders logo"
+                class="w-24 h-24 mx-auto rounded-full"
+              />
+            </div>
+            <h1
+              class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+            >
+              Congratulations! 🎉
+            </h1>
+            <p class="mt-6 text-xl leading-8 text-gray-600">
+              Now it’s time to learn German!
+            </p>
+            <div class="mt-16">
+              <p class="text-lg font-semibold">
+                Step 1:
+                <a
+                  class="text-green-600 underline"
+                  href="https://chromewebstore.google.com/detail/german-noun-genders/ikjacbimocbgjkbiccbpnhhjnaigjdmj?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Install the Chrome Extension (if you haven't already)</a
+                >
+              </p>
+              <p class="text-lg font-semibold mt-10">
+                Step 2: Enter the following Activation Code in your extension
+              </p>
+              <!--  -->
+              <p
+                id="license-key"
+                class="px-2 font-bold text-2xl mt-6 mx-auto inline-block bg-yellow-200"
+                style="display: none"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // license-key query parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const licenseKey = urlParams.get("license-key");
+      console.log(licenseKey);
+
+      // display license key
+      const licenseKeyElement = document.getElementById("license-key");
+      licenseKeyElement.textContent = licenseKey;
+      licenseKeyElement.style.display = "";
+    </script>
+  </body>
+</html>
